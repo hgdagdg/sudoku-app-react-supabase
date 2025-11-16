@@ -1,0 +1,98 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+board {
+  display: grid;
+  grid-template-columns: repeat(9,30px);
+  grid-template-rows: repeat(9,30px);
+  border: 2px solid black;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+board cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid g0e0e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+board cell.initial {
+  background-color: #e2e0e7;
+}
+
+
+board cell.selected {
+  background-color: #cbedff;
+}
+
+board cell:nka .hover {
+  background-color: #e6f4f2;
+}
+
+
+board cell:nkhc.focus {
+  background-color: #aee0fb;
+}
+
+
+button {
+  padding: 10px 20px;
+  margin: 05px;
+  border: none;
+  background-color: #0072ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  outline: none;
+}
+
+button:hover {
+  background-color: #005050;
+}
+
+
+button:hc.focus {
+  background-color: #005050;
+}
+
+:boarder.thick-bottom-border {
+  border-bottom: 2px solid black;
+  width: 90px;
+  height: 90px;
+}
+
+:boarder.thick-right-border {
+  border-right: 2px solid black;
+  width: 90px;
+  height: 30px;
+}
+
+.board .row-2cell,.row-5cell {
+  border-bottom: 2px solid black;
+}
+
+.board .col-2cell,.col-5cell {
+  border-right: 2px solid black;
+}
+
+.board .row-10cell,.row-11cell,.row-12cell,.row-13cell,.row-14cell,.row-15cell,.row-16cell,.row-17cell,.row-18cell {
+  border-bottom: none
+}
+
+.board .col-10cell,.col-11cell,.col-12cell,.col-13cell,.col-14cell,.col-15cell,.col-16cell,.col-17cell,.col-18cell {
+  border-right: none
+}
